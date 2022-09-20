@@ -1,0 +1,7 @@
+<div class="category-container">
+<ul class="categories" *ngFor="let c of categories" >
+    <li (click)="filterByCategory(c.id)" class="li-items"> <a>{{c.name}}</a></li>
+
+    
+</ul>
+</div>

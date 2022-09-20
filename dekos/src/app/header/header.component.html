@@ -1,0 +1,41 @@
+
+  <div class="containerr">
+    <a class="" routerLink="home">
+      <img class="logo" [src]="path" [alt]="alttext" width="120" height="50" />
+    </a>
+    <ul class="navItem">
+      <li>
+        <a class=""routerLinkActive="active" routerLink="home"><fa-icon [icon]="faHome"></fa-icon> Home</a>
+        
+      </li>
+      <li >
+        <a class="" routerLinkActive="active" routerLink="products"><fa-icon [icon]="faBarcode"></fa-icon> Products</a>
+      </li>
+      <li >
+        <a class=""routerLinkActive="active" *ngIf="userService.loggedUser.role === 'ADMIN_ROLE'"  routerLink="admin-panel"><fa-icon [icon]="faUserSecret"></fa-icon> Admin Panel</a>
+      </li>
+    </ul>
+
+
+    <div class="login-registar">
+    <button *ngIf="!userService.loggedUser.id" (click)="backToRegister()" class="account-btn register">
+      Register <fa-icon [icon]="faUserTie"></fa-icon>
+    </button>
+    <button *ngIf="!userService.loggedUser.id" (click)="backToLogin()" class="account-btn login">
+      Login <fa-icon [icon]="faUserTie"></fa-icon>
+    </button>
+    <p class="user-name">{{userService.loggedUser.firstName}}  {{userService.loggedUser.lastName}}</p>
+    <div class="user-avatar" *ngIf="userService.loggedUser.id">
+      <fa-icon [icon]="faCircleUser" ></fa-icon>
+    </div>
+    <button (click)="logout()" *ngIf="userService.loggedUser.id" class="account-btn login">
+      Logout <fa-icon [icon]="faRightFromBracket" ></fa-icon>
+    </button>
+    </div>
+    <button class="cart-btn" routerLink="cart" ><p>{{sharedService.data}}</p><fa-icon class="cart-logo" [icon]="faCart"></fa-icon> </button>
+    <div class="main">
+        <input [(ngModel)]="searchTerm" (keyup)="search($event)" type="text" name="Search" placeholder="Search..." />
+        <button><fa-icon [icon]="faSearch"></fa-icon></button>
+      </div>
+  </div>
+

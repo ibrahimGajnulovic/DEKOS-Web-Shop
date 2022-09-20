@@ -1,0 +1,23 @@
+<h1 class="title">LIST OF ALL PRODUCTS</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Title</th>
+    <th>Image Preview</th>
+    <th scope="col">Price</th>
+    <th scope="col">Quantity</th>
+    <th scope="col">Description</th>
+    <th>IMAGE</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of allProducts">
+    <td>{{product.title}}</td>
+    <td ><img class="image-preview" *ngFor="let img of product.image" [src]="img" alt=""></td>
+    <td>{{product.price}}</td>
+    <td>{{product.quantity}}</td>
+    <td>{{product.description}}</td>
+    <td><Button (click)="openPopUp(product.id)" class="add-image-btn" >Add Image Link</Button></td>
+  </tr>
+  </tbody>
+</table>

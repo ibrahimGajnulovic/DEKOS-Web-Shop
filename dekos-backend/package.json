@@ -1,0 +1,24 @@
+{
+  "name": "dekos-backend",
+  "version": "1.0.0",
+  "description": "Dekos API",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main"
+  },
+  "keywords": [
+    "Node",
+    "MySQL",
+    "CRUD"
+  ],
+  "author": "Ibrahim Gajnulovic",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^1.3.3"
+  }
+}

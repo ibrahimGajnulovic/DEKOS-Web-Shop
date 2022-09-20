@@ -1,0 +1,58 @@
+<div class="wrapper">
+<ng-container *ngIf="products.length != 0">
+    <div class="container">
+        <div class="cart-table">
+            <div class="cart-product">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Sr. No</th>
+                        <th>Product Name</th>
+                        <th>Product Image</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products; let i = index">
+                        <td class="sr-nr">{{i + 1}}</td>
+                        <td class="product-title">{{product.title}}</td>
+                        <td><img [src]="product.image" height="80" width="100" alt=""> </td>
+                        <td class="product-desc">{{product.description}}</td>
+                        <td class="product-price">{{product.price}} KM</td>
+                        <td>{{product.quantity}}</td>
+                        <td>
+                            <button (click)="removeItem(product.id)"
+                            class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr class="btn-row">
+                        <td colspan="4"></td>
+                        <td><button (click)="backToProducts()" class="btn-Shop-More">Shop More</button></td>
+                        <td><button (click)="buy()" class="btn-Checkout">BUY!</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="products.length == 0">
+    <div class="container">
+    <div class="card">
+        <h5 class="card-title">My Cart</h5>
+    </div>
+    <div class="center">
+        <img src="https://cdn3.iconfinder.com/data/icons/shopping-and-ecommerce-28/90/empty_cart-512.png" alt="">
+        <h4>Your cart is empty!</h4>
+        <h5>Add item to it now</h5>
+        <button routerLink="/products" class="cart-btn">Shop Now</button>
+    </div>
+</div>
+</ng-container>
+
+</div>

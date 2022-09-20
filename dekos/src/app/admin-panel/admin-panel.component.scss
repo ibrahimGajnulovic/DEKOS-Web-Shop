@@ -1,0 +1,36 @@
+.container-admin {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 5em;
+}
+
+.a-link-btn {
+  outline: none;
+  border: none;
+  width: 15%;
+  margin: auto;
+  height: 3rem;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 25px;
+  background-color: #f38434;
+  color: #fff;
+  margin-top: 2rem;
+  transition: ease-in-out 100ms;
+  text-decoration: none;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: #f38434;
+    background-color: #050517;
+  }
+}
+
+.active {
+  color: #f38434;
+  background-color: #050517;
+}

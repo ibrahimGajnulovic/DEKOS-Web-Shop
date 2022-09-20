@@ -1,0 +1,29 @@
+.title{
+    text-align: center;
+}
+
+.add-image-btn {
+    outline: none;
+    border: none;
+    width: 100%;
+    margin: auto;
+    height: 3rem;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 2em;
+    background-color: #f38434;
+    color: #fff;
+    transition: ease-in-out 200ms;
+
+    &:hover {
+      color: #f38434;
+      background-color: #050517;
+    }
+  }
+
+  .image-preview{
+    display: grid;
+    grid-auto-flow: dense;
+    width: 80px;
+    height: 70px;
+  }

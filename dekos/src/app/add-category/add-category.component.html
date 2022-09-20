@@ -1,0 +1,10 @@
+<app-get-all-categories></app-get-all-categories>
+
+<div class="category-form">
+  <form  (submit)="saveCategory($event)">
+    <h2>Add New Category</h2>
+    <input [(ngModel)]="category.name" [ngModelOptions]="{standalone: true}" placeholder="Title" type="text" />
+    <button class="save-btn" type="submit">Save</button>
+    
+  </form>
+</div>

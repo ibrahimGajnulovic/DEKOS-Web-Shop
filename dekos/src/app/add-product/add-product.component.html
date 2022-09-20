@@ -1,0 +1,19 @@
+
+
+<div class="product-form">
+  <form  (submit)="saveProduct($event)">
+    <h2>Add New Product</h2>
+    <input [(ngModel)]="product.title" [ngModelOptions]="{standalone: true}" placeholder="Title" type="text" />
+    <input [(ngModel)]="product.price" [ngModelOptions]="{standalone: true}" placeholder="Price" type="number" />
+     <select [(ngModel)]="product.categoryId" [ngModelOptions]="{standalone: true}" class="select-form">
+        <option value="">Select Category</option>
+        <option *ngFor="let category of allCategories" [ngValue]="category.id">{{category.name}}</option>
+     </select>
+    <input [(ngModel)]="product.quantity" [ngModelOptions]="{standalone: true}" placeholder="Quantity" type="number" />
+    <textarea [rows]="5" [cols]="5" [(ngModel)]="product.description" [ngModelOptions]="{standalone: true}" placeholder="Description" type="text"></textarea>
+    <button class="save-btn" type="submit">Save</button>
+    
+  </form>
+</div>
+
+<app-get-all-products></app-get-all-products>

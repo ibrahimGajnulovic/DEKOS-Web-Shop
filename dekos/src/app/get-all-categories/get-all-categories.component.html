@@ -1,0 +1,16 @@
+<h1 class="title">LIST OF ALL CATEGORIES</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let category of categories">
+    <td>{{category.id}}</td>
+    <td>{{category.name}}</td>
+    <td><Button (click)="deleteCategory(category.id)" class="add-image-btn" >Detele Category</Button></td>
+  </tr>
+  </tbody>
+</table>

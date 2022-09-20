@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="container" *ngFor="let product of allProducts | filter:searchKey:'title'">
+    <div class="image" >
+      <img  
+      *ngFor="let img of product.image; let i = index" [src]="img" alt=""
+      [ngClass]="{'image-active': selectedIndex === i}" />
+    </div>
+    <div class="title">
+      <h4>{{ product.title }}</h4>
+    </div>
+    <div class="description">
+      <p>{{ product.description }}</p>
+    </div>
+    <div class="price">
+      <p>{{ product.price }} KM</p>
+    </div>
+    <div class="add-to-cart-button">
+      <button (click)="addToCart(product)" class="addToCart-btn">Add to Cart <fa-icon [icon]="faCartPlus"></fa-icon></button>
+    </div>
+  </div>
+</div>

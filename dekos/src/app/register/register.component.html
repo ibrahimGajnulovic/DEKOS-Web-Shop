@@ -1,0 +1,15 @@
+<div class="register-form">
+  <form (submit)="registerUser($event)">
+    <h2>Register!</h2>
+    <input [(ngModel)]="user.firstName" [ngModelOptions]="{standalone: true}" placeholder="First Name" type="text" />
+    <input [(ngModel)]="user.lastName" [ngModelOptions]="{standalone: true}" placeholder="Last Name" type="text" />
+    <input [(ngModel)]="user.address" [ngModelOptions]="{standalone: true}" placeholder="Address" type="text" />
+    <input [(ngModel)]="user.emailAddress" [ngModelOptions]="{standalone: true}" placeholder="E-mail" type="email" />
+    <input [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}" placeholder="Username" type="text" />
+    <input [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" placeholder="Password" type="password" />
+    <button class="register-btn" type="submit">Register</button>
+    <button (click)="backToLogin()" class="back-to-login-btn">
+      Back to Login
+    </button>
+  </form>
+</div>

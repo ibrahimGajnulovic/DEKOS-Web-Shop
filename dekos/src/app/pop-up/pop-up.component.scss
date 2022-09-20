@@ -1,0 +1,19 @@
+.pop-up-btn {
+  outline: none;
+  border: none;
+  width: 50%;
+  margin: auto;
+  height: 3rem;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 25px;
+  background-color: #f38434;
+  color: #fff;
+  margin-top: 2rem;
+  transition: ease-in-out 300ms;
+
+  &:hover {
+    color: #f38434;
+    background-color: #050517;
+  }
+}

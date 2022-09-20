@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Name</th>
+    <th scope="col">Address</th>
+    <th scope="col">Username</th>
+    <th scope="col">Status</th>
+    <th scope="col">BAN!</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.firstName}} {{user.lastName}}</td>
+    <td>{{user.address}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.status}}</td>
+    <td><button >BAN</button></td>
+  </tr>
+  </tbody>
+</table>
